@@ -1,9 +1,6 @@
 Usage:
 
-amz.py Foo.amz | sh
+amz.py Foo.amz
 
-Do this from the directory you wish the files to end up, or do something like:
-
-amz.py Foo.amz | (cd ~/Music; sh)
-
-Files should end up downloaded into Artist/Album folders.
+Do this from the directory you wish the files to end up, files will be
+downloaded into Artist/Album folders.

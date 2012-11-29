@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import xml.etree.ElementTree as ET
+import subprocess
 import sys
 
 def gettracks(elem):
@@ -15,8 +16,8 @@ def gettracks(elem):
                 fileType = m.text
                 break
         loc = t.find('location').text
-        print("mkdir -p '{0}/{1}'".format(artist, album))
-        print("wget -U'Amazon MP3 Downloader (Win32 1.0.17 en_US)' -O '{0}/{1}/{2:02d} - {3}.{4}' '{5}'".format(artist, album, track, title, fileType, loc))
+        subprocess.check_call(['mkdir', '-p', '{0}/{1}'.format(artist, album)])
+        subprocess.check_call(['wget', '-UAmazon MP3 Downloader (Win32 1.0.17 en_US)', '-O', '{0}/{1}/{2:02d} - {3}.{4}'.format(artist, album, track, title, fileType), loc])
 
 def process(filename):
     tree = ET.parse(filename)
