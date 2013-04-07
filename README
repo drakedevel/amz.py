@@ -4,3 +4,9 @@ amz.py Foo.amz
 
 Do this from the directory you wish the files to end up, files will be
 downloaded into Artist/Album folders.
+
+NOTE: This only works on plaintext (non-encrypted) AMZ files. If you
+download an AMZ file and it doesn't work, you will have to use Clamz
+instead. Clamz can be found at:
+
+https://code.google.com/p/clamz/
